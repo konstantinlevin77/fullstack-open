@@ -3,10 +3,8 @@ sequenceDiagram
     participant browser
     participant server
 
-    
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-    Note right of browser: User clicks on the button to submit the form
     activate server
     server-->>browser: 302 Found Location: /exampleapp/notes
     deactivate server
