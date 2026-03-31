@@ -10,7 +10,7 @@ sequenceDiagram
     deactivate server
 
     
-    Note left of server: Server responds with 302 and Location header; browser follows it automatically
+    Note left of server: Server responds with 302 and Location header. browser follows it automatically
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
