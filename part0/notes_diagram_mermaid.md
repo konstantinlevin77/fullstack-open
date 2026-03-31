@@ -3,14 +3,15 @@ sequenceDiagram
     participant browser
     participant server
 
+    Note right of browser: User clicks on the button to submit the form
+
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
     server-->>browser: 302 Found Location: /exampleapp/notes
     deactivate server
 
-    Note right of browser: User clicks on the button to submit the form
     
-    Note left of server: Server returns a 302 code found, automatically redirecting the browser to the found location
+    Note left of server: Server responds with 302 and Location header; browser follows it automatically
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
